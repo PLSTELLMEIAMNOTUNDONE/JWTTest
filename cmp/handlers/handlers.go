@@ -48,7 +48,7 @@ func makeTokensById(wp *http.ResponseWriter, r *http.Request, id string)  {
 
 
 // @Summary get acc and ref tokens
-// @Description sdf
+// @Description выдает пару Access, Refresh токенов для пользователя с идентификатором id
 // @Produce json
 // @ID getFirst
 // @Param id query string true "id"
@@ -62,7 +62,7 @@ func HandleGetTokens (w http.ResponseWriter, r *http.Request) {
 
 
 // @Summary refresh acc and ref tokens
-// @Description sfdgddf
+// @Description выполняет Refresh операцию на пару Access, Refresh токенов
 // @Accept json
 // @Produce json
 // @ID Second

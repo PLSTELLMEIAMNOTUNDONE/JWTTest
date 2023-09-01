@@ -18,6 +18,7 @@ func init () {
 	repos.Connect()
 	
 }
+
 // @title Swagger Example
 // @version 1.1
 // @description jwt token test
