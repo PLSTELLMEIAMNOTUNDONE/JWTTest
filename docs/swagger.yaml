@@ -1,0 +1,62 @@
+basePath: /
+definitions:
+  hand.tokenJs:
+    properties:
+      AccToken:
+        type: string
+      RefToken:
+        type: string
+    type: object
+host: localhost:5000
+info:
+  contact: {}
+  description: jwt token test
+  title: Swagger Example
+  version: "1.1"
+paths:
+  /first:
+    post:
+      description: sdf
+      operationId: getFirst
+      parameters:
+      - description: id
+        in: query
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema: {}
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+      summary: get acc and ref tokens
+  /second:
+    post:
+      consumes:
+      - application/json
+      description: sfdgddf
+      operationId: Second
+      parameters:
+      - description: token
+        in: body
+        name: token
+        required: true
+        schema:
+          $ref: '#/definitions/hand.tokenJs'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema: {}
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+      summary: refresh acc and ref tokens
+swagger: "2.0"
